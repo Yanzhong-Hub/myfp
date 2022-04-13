@@ -1,0 +1,10 @@
+tushare==1.2.84
+streamlit~=1.8.1
+pandas~=1.4.2
+numpy~=1.22.3
+statsmodels~=0.13.2
+matplotlib~=3.5.1
+scipy~=1.8.0
+sqlalchemy~=1.4.34
+pymssql~=2.2.4
+pillow~=9.1.0
