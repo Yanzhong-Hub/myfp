@@ -9,10 +9,23 @@ import pandas as pd
 import numpy as np
 import datetime
 import matplotlib.pyplot as plt
+import platform
 
 from MyPackages.DataProcess.DataProcess import DataProcess
 
-plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']  # for mac
+
+
+# 中文字体
+import matplotlib.font_manager as fm
+
+if platform.system() == 'Windows':
+    fm.findSystemFonts(fontpaths=None, fontext="ttf")
+    fm.findfont("simhei")  # for windows
+    plt.rcParams['font.sans-serif'] = ['simhei']  # for windows
+
+elif platform.system() == 'Darwin':
+    plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']  # for mac
+
 # 实例化module
 dp = DataProcess()
 
