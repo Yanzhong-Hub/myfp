@@ -18,14 +18,12 @@ from MyPackages.DataProcess.DataProcess import DataProcess
 # 中文字体
 import matplotlib.font_manager as fm
 
-if platform.system() == 'Windows':
+if platform.system() == 'Darwin':
+    plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']  # for mac
+else:
     fm.findSystemFonts(fontpaths=None, fontext="ttf")
     fm.findfont("simhei")  # for windows
-    plt.rcParams['font.sans-serif'] = ['simhei']  # for windows
-
-elif platform.system() == 'Darwin':
-    plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']  # for mac
-
+    plt.rcParams['font.sans-serif'] = ['SimHei']  # for windows
 # 实例化module
 dp = DataProcess()
 
